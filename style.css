@@ -16,15 +16,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 15rem;
+    margin: 0 0 0 -100rem;
+    animation: 1s slideIn forwards;
+    opacity: 0;
+}
+
+@keyframes slideIn {
+    0% {
+        margin-left: -100rem;
+        opacity: 0;
+    }
+    100% {
+        margin-left: 0rem;
+        opacity: 1;
+    }
 }
 
 .bloc {
     padding: 3rem;
     height: 52%;
-    max-width: 18%;
+    max-width: 13%;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .bloc .title {
@@ -43,16 +57,18 @@ body {
 }
 
 .bloc button {
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    width: 10rem;
+    /* width: 8rem; */
     border: none;
     cursor: pointer;
     background: white;
     font-family: 'Lexend Deca', sans-serif;
     font-weight: 400;
+    position: absolute;
+    bottom: 3rem;
 }
 
 .bg-orange {
